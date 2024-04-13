@@ -45,3 +45,15 @@ footer {
     flex-wrap: wrap;
     gap: 1rem;
 }
+.descripcion {
+    font-size: 30px; /* Tamaño del texto */
+}
+ .boton-registrarse {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+}
