@@ -14,6 +14,7 @@
         <p>Tu tienda en línea para mascotas</p>
     </header>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">PetShop</a>
@@ -53,7 +54,8 @@
           </div>
         </div>
       </nav>
-      
+
+      <!-- Carrusel -->
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -80,3 +82,52 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <div class="container">
+        <h2>Nuestros productos</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="./img/alimento_perro.avif" alt="Comida para perros">
+                <h3>Comida para perros</h3>
+                <p>La mejor nutrición para tu amigo peludo.</p>
+            </div>
+            <div class="product-card">
+                <img src="./img/alimento_gatos.jpg" alt="Comida para gatos">
+                <h3>Comida para gatos</h3>
+                <p>Tu gato quiere darse un banquete.</p>
+            </div>
+            <div class="product-card">
+                <img src="./img/accesorios_mascotas.jpg" alt="Accesorios">
+                <h3>Accesorios</h3>
+                <p>Accesorios para el regalon de la casa.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Pet Shop. Todos los derechos reservados.</p>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Contacto
+        </button>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contacto PetShop</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Correo electrónico: contacto@petshop.com</p>
+              <p>Teléfono: +56267865236</p>
+              <p>Dirección: Calle Los Álamos 854, Santiago, Chile</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
