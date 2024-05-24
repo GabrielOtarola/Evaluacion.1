@@ -66,3 +66,19 @@ $(document).ready(function() {
   
       });
     });
+
+$(document).ready(function(){
+    // Inicia el carrusel
+    $('#carouselExampleIndicators').carousel();
+
+    // Intervalo de tiempo entre cada cambio de diapositiva (en milisegundos)
+    var intervalo = 3000; // 3 segundos
+
+    // Función para avanzar al siguiente slide después de un tiempo determinado
+    function avanzarSlide() {
+        $('#carouselExampleIndicators').carousel('next');
+    }
+
+    // Establece el intervalo de tiempo para avanzar al siguiente slide
+    setInterval(avanzarSlide, intervalo);
+});
