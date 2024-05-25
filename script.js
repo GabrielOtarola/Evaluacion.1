@@ -9,39 +9,43 @@ $(document).ready(function() {
         var contrasena = $("#contrasena").val();
         var confirmarContrasena = $("#confirmarContrasena").val();
         var isValid = true;
-  
+        
+        // Regex para solo letras y espacios
+        var regexLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
         // Validación de nombre
-        if (nombre.length < 3) {
-            $("#nombre").next(".error").text("El nombre debe tener al menos 3 caracteres").show();
+        if (nombre.length < 3 || !regexLetras.test(nombre)) {
+            $("#nombre").next(".error").text("El nombre debe tener al menos 3 caracteres y solo letras").show();
             isValid = false;
         } else {
             $("#nombre").next(".error").hide();
         }
-  
+
         // Validación de apellido paterno
-        if (apellidoPaterno.length < 3) {
-            $("#apellidoPaterno").next(".error").text("El apellido paterno debe tener al menos 3 caracteres").show();
+        if (apellidoPaterno.length < 3 || !regexLetras.test(apellidoPaterno)) {
+            $("#apellidoPaterno").next(".error").text("El apellido paterno debe tener al menos 3 caracteres y solo letras").show();
             isValid = false;
         } else {
             $("#apellidoPaterno").next(".error").hide();
         }
-  
+
         // Validación de apellido materno
-        if (apellidoMaterno.length < 3) {
-            $("#apellidoMaterno").next(".error").text("El apellido materno debe tener al menos 3 caracteres").show();
+        if (apellidoMaterno.length < 3 || !regexLetras.test(apellidoMaterno)) {
+            $("#apellidoMaterno").next(".error").text("El apellido materno debe tener al menos 3 caracteres y solo letras").show();
             isValid = false;
         } else {
             $("#apellidoMaterno").next(".error").hide();
         }
-  
+
         // Validación de correo electrónico (básica)
-        if (correoElectronico.indexOf("@") === -1 || correoElectronico.indexOf(".") === -1) {
+        var regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regexCorreo.test(correoElectronico)) {
             $("#correoElectronico").next(".error").text("El correo electrónico no es válido").show();
             isValid = false;
         } else {
             $("#correoElectronico").next(".error").hide();
         }
-  
+
         // Validación de contraseña
         if (contrasena.length < 6) {
             $("#contrasena").next(".error").text("La contraseña debe tener al menos 6 caracteres").show();
@@ -49,7 +53,7 @@ $(document).ready(function() {
         } else {
             $("#contrasena").next(".error").hide();
         }
-  
+
         // Validación de confirmación de contraseña
         if (confirmarContrasena !== contrasena) {
             $("#confirmarContrasena").next(".error").text("Las contraseñas no coinciden").show();
@@ -57,15 +61,18 @@ $(document).ready(function() {
         } else {
             $("#confirmarContrasena").next(".error").hide();
         }
-  
+
         // Enviar el formulario si todas las validaciones son correctas
         if (isValid) {
             alert("Formulario enviado con éxito");
             this.submit();
         }
-  
-      });
     });
+});
+
+
+
+
 
 $(document).ready(function(){
     // Inicia el carrusel
