@@ -94,12 +94,8 @@ function cerrarPopup() {
     var popupOverlay = document.getElementById('popupOverlay');
     popupOverlay.style.display = 'flex';
   }, 2000);
+
   
-  // Función para cerrar el pop-up
-function cerrarPopup() {
-    var popupOverlay = document.getElementById('popupOverlay');
-    popupOverlay.style.display = 'none';
-  }
   
   // Función para mostrar el mensaje de que el producto se ha agregado al carrito
   function mostrarMensaje() {
