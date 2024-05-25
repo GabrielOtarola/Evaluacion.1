@@ -82,3 +82,43 @@ $(document).ready(function(){
     // Establece el intervalo de tiempo para avanzar al siguiente slide
     setInterval(avanzarSlide, intervalo);
 });
+
+// Función para cerrar el pop-up
+function cerrarPopup() {
+    var popupOverlay = document.getElementById('popupOverlay');
+    popupOverlay.style.display = 'none';
+  }
+  
+  // Mostrar el pop-up después de un retraso de 2 segundos
+  setTimeout(function() {
+    var popupOverlay = document.getElementById('popupOverlay');
+    popupOverlay.style.display = 'flex';
+  }, 2000);
+  
+  // Función para cerrar el pop-up
+function cerrarPopup() {
+    var popupOverlay = document.getElementById('popupOverlay');
+    popupOverlay.style.display = 'none';
+  }
+  
+  // Función para mostrar el mensaje de que el producto se ha agregado al carrito
+  function mostrarMensaje() {
+    alert('El producto se ha agregado al carrito');
+  }
+  
+  // Función para agregar al carrito y mostrar el mensaje
+  function agregarAlCarrito() {
+    mostrarMensaje();
+  }
+  
+
+  function mostrarMensaje() {
+    var mensaje = document.createElement("div");
+    mensaje.textContent = "El producto se ha agregado al carrito";
+    mensaje.classList.add("mensaje-agregado");
+    document.body.appendChild(mensaje);
+    setTimeout(function() {
+      mensaje.remove();
+    }, 2000);
+  }
+  
